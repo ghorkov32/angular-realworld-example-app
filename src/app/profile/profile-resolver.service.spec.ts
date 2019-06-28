@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ProfileResolverService } from './profile-resolver.service';
+import { ProfileResolver } from './profile-resolver.service';
 
 describe('ProfileResolverService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: ProfileResolverService = TestBed.get(ProfileResolverService);
+    const service: ProfileResolver = TestBed.get(ProfileResolver);
     expect(service).toBeTruthy();
   });
 });
