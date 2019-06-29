@@ -1,11 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/layout/header.component';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
-import { FooterComponent, ShowAuthedDirective, SharedModule } from './shared';
+import { HeaderComponent } from './shared/layout';
+import { FooterComponent, SharedModule } from './shared';
 import { RouterTestingModule } from '@angular/router/testing';
-import { CoreModule } from './core/core.module';
+import { CoreModule } from './core';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -27,8 +26,5 @@ describe('AppComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  });
-  it('should show app title = ', () => {
-    expect(1 === 1).toBeTruthy();
   });
 });

@@ -7,6 +7,7 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
+      require('karma-mocha-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
@@ -17,12 +18,12 @@ module.exports = function (config) {
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['mocha'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false
+    browsers: ['ChromeHeadless'],
+    singleRun: false,
   });
 };
